@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+// component
+import LeftAlbumTool from './component/LeftAlbumTool';
+import RightAlbumTool from './component/RightAlbumTool';
+// style
+import styles from '../src/component/component.module.css'
+
+// img
+import ring from '../src/assets/icons/albumRingImg.png';
 
 function App() {
+  const num = 25;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LeftAlbumTool />
+      <div className={styles.albumRings}>
+          {Array.from({length : num}).map((_, i) => (
+            <img key={i} className={styles.ring} src={ring} />
+          ))}
+      </div>
+      <RightAlbumTool />
     </div>
   );
 }
