@@ -10,8 +10,7 @@
 .LefttoolPage__style {   
     width: 580px;
     height: 100vh;
-    overflow: auto;
-    -ms-overflow-style: none;
+    /* overflow: auto; */
     scrollbar-width: none;
     background-color: #fff;
     border: 1px solid #C8C8C8;
@@ -22,8 +21,7 @@
 .RighttoolPage__style {
     width: 580px;
     height: 100vh;
-    overflow: auto;
-    -ms-overflow-style: none;
+    /* overflow: auto; */
     scrollbar-width: none;
     background-color: #fff;
     border: 1px solid #C8C8C8;
@@ -33,18 +31,47 @@
 /* VideoInput */
 .VIpage__style{
     width: 200px;
-    height: 800px;
-    border: 1px solid black;
+    height: 500px; 
+    /* border: 1px solid black; */
     margin: 2% 2% 10% 2%;
     display: flex;
     flex-direction: column;
     padding: 3%;
+    justify-content: center;
 }
 
-.vI__style {
+.VI__style {
     width : 100%;
     height : 70%;
     background-color: #B1B1B1;
+}
+
+.VINot__style {
+    width : 100%;
+    height : 70%;
+    /* box-shadow:inset 0 0 50px #B1B1B1; */
+    border: 3px solid #B1B1B1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.VIinput__style {
+    width : 100%;
+    height : 70%;
+    /* box-shadow:inset 0 0 50px #B1B1B1; */
+    border: 3px solid #B1B1B1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.VIGoBtn {
+    border : none;
+    font-size: 16px;
+    max-width: 120px;
+    background-color: transparent;
+    color: #B1B1B1;
 }
 
 .vT__style {
@@ -58,7 +85,7 @@
 }
 
 .videoDate {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: bold;
 }
 
@@ -84,3 +111,71 @@
     margin-top: 13%;
     margin-bottom: 13%;
   }
+
+/* WriteText's style */
+.WriteText {
+    margin : 30px;
+    align-items :flex-start;
+}
+
+.WT__dateSection{
+    max-width: 44%;
+}
+
+.WT__textSection {
+    margin-top: 10%;
+}
+
+.WT__text {
+    background-color: #B5C0D0;
+    border: none;
+    border-radius: 20px;
+    width : 90%;
+    height: 500px;
+    padding: 20px;
+    color: '#fff';
+    font-size: 15px;
+}
+
+textarea::placeholder {
+    color : '#fff'
+}
+
+.WT__btnSection {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.WT__btnSection button {
+    margin : 5px
+}
+
+/* WrtieVideo's style */
+.WriteVideo {
+    margin : 30px;
+    padding : 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.WV__videoSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+
+}
+
+.WV__btnSection {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    align-items: center;
+}
+
+.WV__btnSection button {
+    margin: 5px;
+}

@@ -1,14 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 // styles
 import styles from './component.module.css'
 
 const VideoInput = () => {
+    const date = `${new Date().getMonth() + 1} 월 ${new Date().getDate()} 일`;
+
+
     return (
         <section className={styles.VIpage__style}>
             <section className={styles.vI__style}>
             </section>
             <section className={styles.vT__style}>
-                <div className={styles.videoDate}>{new Date().getDate()}</div>
+                <div className={styles.videoDate}>{date}</div>
                 <div className={styles.videoText}>
                     <text>오늘의 인생네컷</text>
                 </div>
