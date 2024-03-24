@@ -6,7 +6,7 @@ import ring from '../assets/icons/albumRingImg.png';
 const Spring = () => {
     return (
         <div className={styles.albumRings}>
-                    {Array.from({ length: 25 }).map((_, i) => (
+                    {Array.from({ length: 29 }).map((_, i) => (
                         <img key={i} className={styles.ring} src={ring} />
                     ))}
                 </div>

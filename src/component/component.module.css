@@ -28,16 +28,14 @@
     box-shadow: 0px 0px 10px 10px #C8C8C8;
 }
 
-/* VideoInput */
+/* VideoShow && VideoNotInput */
 .VIpage__style{
     width: 200px;
-    height: 500px; 
-    /* border: 1px solid black; */
+    height: 90vh; 
     margin: 2% 2% 10% 2%;
     display: flex;
     flex-direction: column;
     padding: 3%;
-    justify-content: center;
 }
 
 .VI__style {
@@ -58,7 +56,7 @@
 
 .VIinput__style {
     width : 100%;
-    height : 70%;
+    height : 74%;
     /* box-shadow:inset 0 0 50px #B1B1B1; */
     border: 3px solid #B1B1B1;
     display: flex;
@@ -74,14 +72,27 @@
     color: #B1B1B1;
 }
 
-.vT__style {
+.VT__style {
     text-align: left;
-    margin-top: 10%;
+    margin-top: 50px;
     margin-bottom: 40%;
 }
 
-.vB__style {
-    margin: 5%;
+.VB__btnSection  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.VB__btnSection button {
+    margin : 5px;
+    width : 200px;
+    height : 30px;
+    border : none;
+    border-radius : 5px;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .videoDate {
@@ -114,12 +125,29 @@
 
 /* WriteText's style */
 .WriteText {
-    margin : 30px;
     align-items :flex-start;
+    padding: 16px;
 }
 
 .WT__dateSection{
-    max-width: 44%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.WT__dateSection button {
+    margin-left: 10px;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 12px;
+    border: none;
+    background-color: #fff; 
+}
+
+.WT__dateSection input {
+    border: none;
+    margin-left: 20px;
+    margin-top: 20px;
+    color : #3b3b3b
 }
 
 .WT__textSection {
@@ -129,7 +157,7 @@
 .WT__text {
     background-color: #B5C0D0;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     width : 90%;
     height: 500px;
     padding: 20px;
@@ -154,11 +182,10 @@ textarea::placeholder {
 
 /* WrtieVideo's style */
 .WriteVideo {
-    margin : 30px;
-    padding : 30px;
     display: flex;
     align-items: center;
     flex-direction: row;
+    
 }
 
 .WV__videoSection {
@@ -172,10 +199,23 @@ textarea::placeholder {
 .WV__btnSection {
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
+    margin-left: 50px;
     align-items: center;
+    justify-content: center;
 }
 
 .WV__btnSection button {
     margin: 5px;
+}
+
+/* VideoInput */
+.VideoPlay {
+    width : 100%;
+    height : 70%;
+   margin-top: 35px;
+    background-color:#B1B1B1;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

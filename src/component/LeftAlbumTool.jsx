@@ -1,19 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import styles from './component.module.css';
-//component
-import VideoInput from "./VideoInput";
+
+import VideoShow from "./VideoShow";
+import VideoNotInput from "./VideoNotInput";
 import WriteText from "./WriteText";
 
-const LeftAlbumTool = () => {
-    
+const LeftAlbumTool = ({ data }) => {
+    // 현재 경로를 확인
+    const location = useLocation();
+    const [isExist, setIsExsist] = useState(false);
+
+    const isRoot = location.pathname === '/';
+
+    useEffect(() => {
+        if (data && data.length > 0) {
+            setIsExsist(true);
+        } else {
+            setIsExsist(isExist);
+        }
+    }, [data]);
+
     return (
         <article className="layout">
             <section className={styles.LefttoolPage__style}>
-            <WriteText />
-            {/* <div className={styles.fourVideoImg}>
-                {/* <VideoInput />
-                <VideoInput /> 
-            </div> */}
+                <div className={styles.fourVideoImg}>
+                    {
+                        isRoot ? (
+                            data && data.length > 0 ? (
+                            <>
+                                {data.map((item, index) => (
+                                    <VideoShow key={index} data={item} />
+                                ))}
+                            </>
+                        ) : (
+                            <VideoNotInput />
+                        )
+                        ) : null
+                    }  
+                    <WriteText />
+                </div>
             </section>
         </article>
     )
